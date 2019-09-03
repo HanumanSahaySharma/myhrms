@@ -1,0 +1,23 @@
+// Colors
+$default-dark: #333853;
+$default-white: #ffffff;
+$default-blue: #1665DA;
+$default-red: #F4282D;
+$default-green: #33AC45;
+$default-yellow: #F7941E;
+$default-gray: #8D9DAD;
+$border: #C8D2DB;
+$body-bg: #E6E8F0;
+
+// Font Stack
+$font-stack: 'Fira Sans', sans-serif;
+
+$colors: (
+  "blue": $default-blue,
+  "red": $default-red,
+  "orange": $orange,
+  "yellow": $default-yellow,
+  "green": $default-green,
+  "white": $default-white,
+  "gray": $default-gray,
+) !default;

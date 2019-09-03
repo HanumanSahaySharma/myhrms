@@ -1,0 +1,101 @@
+.header {
+  background: $white;
+  left: 60px;
+  right: 0;
+  top: 0;
+  padding: 12px 20px;
+  z-index: 2;
+  @extend .position-fixed;
+  @include vendor-prefix(box-shadow, 0 0 15px rgba(0,0,0,0.2));
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    @extend .text-muted;
+    @extend .mb-0;
+  }
+  .header-search-bar {
+    margin-right: 15px;
+    @extend .position-relative;
+    input[type="text"] {
+      padding: 15px;
+      font-size: 14px;
+      width: 100%;
+      min-width: 240px;
+    }
+    .search-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      @extend .text-muted;
+    }
+  }
+  .header-notifications {
+    ul {
+      @extend .mb-0;
+      @extend .d-flex;
+      li {
+        margin-left: 15px;
+        width: 32px;
+        height: 32px;
+        color: $default-gray;
+        cursor: pointer;
+        background: lighten($default-gray, 30%);
+        @include vendor-prefix(transition, all .4s);
+        @include vendor-prefix(border-radius, 50%);
+        &:hover {
+          background: $default-dark;
+          color: $default-white;
+        }
+        .material-icons {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .user-profile {
+    padding-left: 15px;
+    margin-left: 15px;
+    border-left: 1px solid $border-color;
+    @extend .d-flex;
+    @extend .align-items-center;
+    > ul > li {
+      > a {
+        color: $default-dark;
+        @extend .p-0;
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .pr-3;
+      }
+      ul li a {
+        font-size: 14px;
+      }
+    }
+    .dropdown-toggle::after {
+      position: absolute;
+      top: 8px;
+      right: 0;
+    }
+    img {
+      width: 32px;
+      width: 32px;
+      margin-right: 10px;
+      @include vendor-prefix(border-radius, 50%);
+    }
+    .user-info {
+      font-size: 14px;
+      p {
+        line-height: 14px;
+        @extend .mb-0;
+        span {
+          color: $default-gray;
+          font-size: 12px;
+          @extend .d-block;
+        }
+      }
+    }
+  }
+}
+.page-container {
+  padding: 90px 30px 50px 90px;
+}

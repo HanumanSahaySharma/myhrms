@@ -1,0 +1,22 @@
+@import 'base/_mixins';
+@import 'base/_typography';
+@import 'base/_variables';
+@import 'base/_base';
+
+// Utils
+@import 'utils/_buttons';
+
+/* Components */
+@import 'components/_header';
+@import 'components/_sidebar';
+
+.title-bar {
+  .btn {
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .justify-content-center;
+    .fa {
+      margin-right: 5px;
+    }
+  }
+}
