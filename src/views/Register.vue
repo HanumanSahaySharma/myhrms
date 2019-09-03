@@ -110,8 +110,9 @@ export default {
           .then(() => {
             this.$store.commit('setLoading', false);
             this.$store.commit('resetStates');
+            this.$store.commit('setAuthUser', null);
             this.$noty.success("You have successfully registered!");
-            this.$router.push({path: '/login'});
+            this.$router.push('/login');
           }).catch(err => {
             this.$noty.error(err.message);
             this.$store.commit('setLoading', false);
