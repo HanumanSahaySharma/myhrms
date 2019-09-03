@@ -14,7 +14,7 @@
     </div>
     <div class="card">
       <div class="card-body">
-        <table class="table table-bordered">
+        <table class="table table-bordered mb-0" v-if="employees">
           <tr>
             <th>Name</th>
             <th>Email</th>
@@ -55,6 +55,10 @@
             :data="modalData">
           </app-edit-employee>
         </table>
+        <b-alert show variant="primary" v-else class="mb-0">
+          There are no employees available right now! please add here before.
+          <router-link :to="{ name: 'NewEmployee'}" class="btn btn-primary">Add here</router-link>
+        </b-alert>
       </div>
     </div>
   </div>
@@ -66,7 +70,7 @@ import Axios from 'axios';
 import EditEmployee from '@/components/modals/EditEmployee';
 import { db } from './../firebase/config';
 export default {
-  created() {
+  mounted() {
     return this.getAllEmployees();
   },
   components: {

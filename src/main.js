@@ -46,12 +46,12 @@ Vue.config.productionTip = false;
 // });
 
 let app;
-Firebase.auth().onAuthStateChanged(user => {
+Firebase.auth().onAuthStateChanged(async user => {
   if(!app) {
     if(user) {
-      store.commit('setAuthUser', user);
+      await store.commit('setAuthUser', user.email);
     } else {
-      store.commit('setAuthUser', null);
+      await store.commit('setAuthUser', null);
     }
     app = new Vue({
       router,
