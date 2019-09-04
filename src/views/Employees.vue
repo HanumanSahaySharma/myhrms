@@ -56,8 +56,7 @@
           </app-edit-employee>
         </table>
         <b-alert show variant="primary" v-else class="mb-0">
-          There are no employees available right now! please add here before.
-          <router-link :to="{ name: 'NewEmployee'}" class="btn btn-primary">Add here</router-link>
+          There are no employees available right now. please add employee first.
         </b-alert>
       </div>
     </div>
