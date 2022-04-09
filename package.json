@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.0.0-rc.27",
     "core-js": "^2.6.5",
     "firebase": "^6.4.2",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "vee-validate": "^2.2.13",
     "vue": "^2.6.10",
     "vue-multiple-progress": "^1.6.0",
